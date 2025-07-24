@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy & Terms</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9fb;
+      color: #333;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .tab-buttons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .tab-buttons button {
+      padding: 12px 20px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .btn-privacy { background-color: #6a0dad; color: #fff; }
+    .btn-terms { background-color: #0077b6; color: #fff; }
+
+    .btn-privacy:hover { background-color: #5a0991; }
+    .btn-terms:hover { background-color: #005f8a; }
+
+    .section {
+      display: none;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border-top: 4px solid #f4c430; /* Yellow */
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    h1, h2 {
+      color: #6a0dad; /* Primary violet */
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+
+    strong {
+      color: #0f9d58; /* Green highlight */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tab-buttons">
+    <button class="btn-privacy" onclick="showSection('privacy')">Privacy Policy</button>
+    <button class="btn-terms" onclick="showSection('terms')">Terms & Conditions</button>
+  </div>
+
+  <!-- Privacy Policy Section -->
+  <div id="privacy" class="section active">
+    <h1>Privacy Policy</h1>
+    <p><strong>Last updated:</strong> July 24, 2025</p>
+
+    <p>Welcome to our file converter app. Your privacy is important to us. This Privacy Policy explains how we handle your data when you use our app to convert files.</p>
+
+    <h2>1. About the App</h2>
+    <p>Our app allows users to convert files including:</p>
+    <ul>
+      <li>Images to PDF</li>
+      <li>PDF to Images</li>
+      <li>PDF to Word</li>
+      <li>Word to PDF</li>
+      <li>PDF to PPTX</li>
+      <li>PPTX to PDF</li>
+      <li>Merge PDFs</li>
+      <li>Compress PDF</li>
+      <li>Reorder PDF</li>
+      <li>Extract ZIP</li>
+      <li>Zip Files</li>
+    </ul>
+
+    <p>Users can view the converted files directly through the app and access them in their device storage.</p>
+
+    <h2>2. What Data We Handle</h2>
+    <ul>
+      <li>Files uploaded by the user are sent securely to our server.</li>
+      <li>The server processes and converts the file.</li>
+      <li>The converted file is sent back and saved locally on the user’s device.</li>
+      <li><strong>All files are deleted from our server immediately after processing.</strong></li>
+    </ul>
+    <p><strong>We do not store, share, or analyze file contents in any way.</strong></p>
+
+    <h2>3. Data Security</h2>
+    <p>We use secure HTTPS connections to encrypt all file transfers between the app and our server.</p>
+
+    <h2>4. No Personal Information Collected</h2>
+    <p>We do not collect any personal information like name, email, or phone number. No account is required to use the app.</p>
+
+    <h2>5. Children’s Privacy</h2>
+    <p>This app is not intended for children under 13. We do not knowingly collect any data from children.</p>
+
+    <h2>6. Changes to This Policy</h2>
+    <p>We may update this policy. Any changes will be posted here with a new date.</p>
+
+    <h2>7. Contact Us</h2>
+    <p>If you have questions about this policy, contact us at: <strong>[your-email@example.com]</strong></p>
+  </div>
+
+  <!-- Terms and Conditions Section -->
+  <div id="terms" class="section">
+    <h1>Terms & Conditions</h1>
+    <p>By using this app, you agree to the following terms:</p>
+    <ul>
+      <li>The app is provided “as is” with no guarantees of uptime, performance, or data recovery.</li>
+      <li>You are solely responsible for the files you upload.</li>
+      <li>You must not use the app to process illegal, offensive, or copyrighted material without rights.</li>
+      <li>We reserve the right to update the app or discontinue features at any time.</li>
+      <li>We are not liable for any data loss, errors, or consequences resulting from use of this app.</li>
+    </ul>
+
+    <p>Use of the app implies acceptance of these terms and any future updates.</p>
+  </div>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
